@@ -68,6 +68,10 @@ function generateBookingID() {
   return Math.random().toString(36).substring(7);
 }
 
+app.get("/", (req, res) => {
+  res.send("server runing");
+});
+
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
