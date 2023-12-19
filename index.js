@@ -3,11 +3,13 @@ const bodyParser = require("body-parser");
 const { createCanvas, loadImage } = require("canvas");
 const fs = require("fs");
 var QRCode = require("qrcode");
+const cors = require("cors");
 
 const app = express();
 const port = 3000;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post("/generate-ticket", async (req, res) => {
   const { experienceName, date, numberOfPersons, customerName } = req.body;
