@@ -28,6 +28,7 @@ POST /generate-ticket
 Generates a ticket based on the provided JSON payload.
 
 Example payload:
+
 {
     "experienceName": "Racing",
     "date": "01/08/2001",
